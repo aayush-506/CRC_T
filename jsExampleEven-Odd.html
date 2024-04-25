@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="t1" placeholder="Enter 1st number"><br><br>
+    <button onclick="check()">check</button><br><br>
+    <p id="p1"></p>
+    <script>
+        function check(){
+            let n1= Number(document.getElementById("t1").value);
+            if(n1%2==0){
+                let n3="It is even"
+            document.getElementById("p1").innerHTML=n3;
+              }
+              else{
+                let n3="It is odd"
+                document.getElementById("p1").innerHTML=n3;
+              }
+              }
+
+    </script>
+</body>
+</html>

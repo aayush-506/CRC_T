@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="t1" placeholder="Enter 1st number"><br><br>
+    <input type="text" name="" id="t2" placeholder="Enter 2nd number"><br><br>
+    <button onclick="add()">Add</button><br><br>
+    <button onclick="sub()">Subtract</button><br><br>
+    <button onclick="multiply()">multiply</button><br><br>
+    <button onclick="divide()">divide</button><br><br>
+    <p id="p1"></p>
+    <script>
+        function add(){
+            let n1=document.getElementById("t1").value;
+            let n2=document.getElementById("t2").value;
+            let n3=Number(n1)+Number(n2);
+            document.getElementById("p1").innerHTML=n3;
+        }
+        function sub(){
+            let n1=document.getElementById("t1").value;
+            let n2=document.getElementById("t2").value;
+            let n3=Number(n1)-Number(n2);
+            document.getElementById("p1").innerHTML=n3;
+        }
+        function multiply(){
+            let n1=document.getElementById("t1").value;
+            let n2=document.getElementById("t2").value;
+            let n3=Number(n1)*Number(n2);
+            document.getElementById("p1").innerHTML=n3;
+        }
+        function divide(){
+            let n1=document.getElementById("t1").value;
+            let n2=document.getElementById("t2").value;
+            let n3=Number(n1)/Number(n2);
+            document.getElementById("p1").innerHTML=n3;
+        }
+    </script>
+</body>
+</html>

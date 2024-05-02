@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="n1" placeholder="Enter first number">
+    <input type="text" id="n2" placeholder="Enter second number">
+    <input type="text" id="n3" placeholder="Enter third number">
+    <button onclick="gt()">Find</button>
+    <h3 id="p1"></h3>
+    <script>
+        function gt() {
+            let n1 = document.getElementById("n1").value
+            let n2 = document.getElementById("n2").value
+            let n3 = document.getElementById("n3").value
+
+            if (Number(n1) > Number(n2) && Number(n2) > Number(n3)) {
+                document.getElementById("p1").innerHTML = "Decreasing"
+            }
+            else if (Number(n1) < Number(n2) && Number(n2) < Number(n3)) {
+                document.getElementById("p1").innerHTML = "Increasing"
+            }
+            else {
+                document.getElementById("p1").innerHTML = "Neither Increasing Nor Decreasing"
+            }
+        }
+    </script>
+</body>
+
+</html>

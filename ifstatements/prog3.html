@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="n" placeholder="Enter a number">
+    <button onclick="pn()">Find</button>
+    <h3 id="p1"></h3>
+    <script>
+        function pn() {
+            let n1 = document.getElementById("n").value
+
+            if (parseFloat(n1) > 0) {
+
+                document.getElementById("p1").innerHTML = "The number is positive"
+            }
+            else if (n1 < 0) {
+                document.getElementById("p1").innerHTML = "The number is negative"
+            }
+            else {
+                document.getElementById("p1").innerHTML = "The number is zero"
+            }
+        }
+    </script>
+</body>
+
+</html>

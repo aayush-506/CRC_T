@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="s1" placeholder="Enter first side">
+    <input type="text" id="s2" placeholder="Enter second side">
+    <input type="text" id="s3" placeholder="Enter third side">
+    <button onclick="ft()">Find</button>
+    <h3 id="p1"></h3>
+    <script>
+        function ft() {
+            let s1 = document.getElementById("s1").value
+            let s2 = document.getElementById("s2").value
+            let s3 = document.getElementById("s3").value
+
+            if (Number(s1) == Number(s2) && s1 == Number(s3)) {
+
+                document.getElementById("p1").innerHTML = "Triangle is equilateral"
+            }
+            else if (s1 == s2 || s1 == s3 || s2 || s3) {
+                document.getElementById("p1").innerHTML = "Triangle is isosceles"
+            }
+
+            else {
+
+                document.getElementById("p1").innerHTML = "Triangle is scalene"
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

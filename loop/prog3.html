@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter your number here" id="t1" />
+    <button onclick="reverse()">Press Here</button>
+    <p id="ans">Reverse of the number is:</p>
+    <script>
+      function reverse() {
+        let x = Number(document.getElementById("t1").value);
+        let n = x;
+        let sum = 0;
+        while (n > 0) {
+          let r = n % 10;
+          sum = sum * 10 + r;
+          n = n / 10;
+        }
+        document.getElementById("ans").innerHTML =
+          "Reverse of the number is:" + sum;
+      }
+    </script>
+  </body>
+</html>

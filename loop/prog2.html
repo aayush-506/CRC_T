@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter the number here" id="t1" />
+    <button onclick="sum()">Press Here for SUM</button>
+    <button onclick="multiply()">Press Here for MULTIPLY</button>
+    <p id="sum">THE SUM OF DIGIT IS:</p>
+    <p id="multiply">THE MULTIPLY OF DIGITS ARE:</p>
+    <script>
+      function sum() {
+        let n = Number(document.getElementById("t1").value);
+        let sum = 0;
+        while (n > 0) {
+          let r = n % 10;
+          sum = sum + r;
+          n = n / 10;
+        }
+        document.getElementById("sum").innerHTML ="THE SUM OF DIGIT IS:"+ sum;
+      }
+
+      function multiply(){
+        let n=Number(document.getElementById("t1").value);
+        let multiply = 1;
+        while (n >= 0) {
+          let r = n % 10;
+          multiply = multiply * r;
+          n = n / 10;
+        }
+        document.getElementById("multiply").innerHTML ="THE MULTIPLY OF DIGITS ARE:"+ multiply;
+      }
+
+      
+    </script>
+  </body>
+</html>

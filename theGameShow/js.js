@@ -59,7 +59,7 @@ function secret() {
   const lower = "qwertyuiopasdfghjklzxcvbnm";
   const num = "1234567890";
   const special = "!@#$%^&*";
-  num=Number(document.getElementById("input").value)
+ let numb=Number(document.getElementById("input").value)
 
   sc = "";
 
@@ -68,9 +68,9 @@ function secret() {
   sc += num[Math.floor(Math.random()) * num.length];
   sc += special[Math.floor(Math.random()) * special.length];
 
-  for (i = 4; i < num; i++) {
+  for (i = 4; i < numb; i++) {
     const allChars = upper + lower + num + special;
     sc += allChars[Math.floor(Math.random() * allChars.length)];
   }
-  document.getElementById("p6").innerHTML=sc;
+  document.getElementById("p5").innerHTML=sc;
 }

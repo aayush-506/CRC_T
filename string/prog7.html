@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Lexicographical Equality</title>
+</head>
+<body>
+    <label for="str1">Enter the first string:</label>
+    <input type="text" id="str1" placeholder="Enter the first string">
+    <br>
+    <label for="str2">Enter the second string:</label>
+    <input type="text" id="str2" placeholder="Enter the second string">
+    <br>
+    <button onclick="check()">Check Equality</button>
+    <p id="output"></p>
+
+    <script>
+        function check() {
+            
+            let str1 = document.getElementById("str1").value;
+            let str2 = document.getElementById("str2").value;
+
+            if (str1 === str2) {
+                document.getElementById("output").innerText = "The two strings are lexicographically equal.";
+            } else {
+                document.getElementById("output").innerText = "The two strings are not lexicographically equal.";
+            }
+        }
+    </script>
+</body>
+</html>

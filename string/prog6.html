@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str1">Enter the First String</label><br>
+    <input type="text" id="str1" placeholder="Enter the String"><br>
+    <label for="str2">Enter the Second String</label><br>
+    <input type="text" id="str2" placeholder="Enter the String"><br>
+    <button id="btn" onclick="char()">Click</button>
+    <p id="output">The required String is :</p>
+    <script>
+         function char(){
+            let String1=document.getElementById("str1").value
+            let String2=document.getElementById("str2").value
+            let result = String2 + String1;
+            document.getElementById("output").innerHTML=`The required String is :${result}`
+         }
+    </script>
+</body>
+</html>

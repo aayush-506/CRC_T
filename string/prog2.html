@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <label for="">Enter the String</label>
+    <input type="text" name="" id="str" placeholder="Enter the String" /><br />
+
+    <label for="">Enter the Starting Index</label>
+    <input type="text" id="index1" placeholder="Enter the index" /><br />
+
+    <label for="">Enter the last Index</label>
+    <input type="text" id="index2" placeholder="Enter the index" /><br />
+
+    <button id="btn" onclick="char()">Submit</button>
+    <p id="output">the character at is :</p>
+
+    <script>
+      function char() {
+        let string = document.getElementById("str").value;
+        let start = document.getElementById("index1").value;
+        let end = document.getElementById("index2").value;
+        let result = "";
+        if (start >= 0 && end < string.length && start <= end) {
+          for (let i = start; i <= end; i++) {
+            result = result + string[i];
+          }
+         (document.getElementById("output").innerHTML = `The required substring is ${result}`);
+        } else {
+          alert("Invalid Input");
+        }
+      }
+    </script>
+  </body>
 </html>

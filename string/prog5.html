@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Pattern</title>
+</head>
+<body>
+    <label for="str">Enter the String:</label>
+    <input type="text" id="str" placeholder="Enter the string">
+    <br>
+    <label for="pattern">Enter the Pattern:</label>
+    <input type="text" id="pattern" placeholder="Enter the pattern">
+    <br>
+    <button onclick="checkPattern()">Check Pattern</button>
+    <p id="output"></p>
+
+    <script>
+        function checkPattern() {
+            const string = document.getElementById("str").value;
+            const pattern = document.getElementById("pattern").value;
+            if (string.includes(pattern)) {
+                document.getElementById("output").innerText = "The string contains the specified pattern.";
+            } else {
+                document.getElementById("output").innerText = "The string does not contain the specified pattern.";
+            }
+        }
+    </script>
+</body>
+</html>

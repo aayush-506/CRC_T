@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">Enter the String</label>
+    <input type="text" id="str" placeholder="Enter the string">
+    <button id="btn" onclick="char()">click</button>
+    <p id="alpha">No. of Alphabets in the given string is</p>
+    <p id="number">No. of Digits in the given string is</p>
+    <p id="char">No. of Special Characters in the given string is</p>
+    <script>
+      function char(){
+        let string = document.getElementById("str").value
+        const Alphabets = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
+        const Digits="1234567890"
+        const Special="!@#$%^&*"
+        let countAlpha = 0;
+        let countDigit = 0;
+        let countchar = 0;
+        for(let i =0;i<string.length;i++){
+            if(Alphabets.includes(string[i])){
+                countAlpha++;
+            }
+            else if(Digits.includes(string[i])){
+                countDigit++;
+            }
+            else if(Special.includes(string[i])){
+                countchar++;
+            }
+        }
+        document.getElementById("alpha").innerHTML=`No. of Alphabets in the given string is ${countAlpha}`
+        document.getElementById("number").innerHTML=`No. of Digits in the given string is ${countDigit}`
+        document.getElementById("char").innerHTML=`No. of Special Characters in the given string is ${countchar}`
+       
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter the String</label>
+    <input type="text" name="" id="str" placeholder="Enter the String"><br>
+    <label for="">Enter the Index</label>
+    <input type="text" id="index" placeholder="Enter the index"><br>
+    <button id="btn" onclick="char()">Submit</button>
+    <p id="output">the character at is :</p>
+    <script>
+           function char(){
+            let n = document.getElementById("str").value
+            let m = document.getElementById("index").value
+            if(m<=n.length && m>=0 ){
+               let final= n.charAt(m);
+               document.getElementById("output").innerHTML = `The character at index ${ m}  is : ${final}`;
+            }
+            else{
+                alert("invalid input")
+            }
+          
+           }
+    </script>
+</body>
+</html>

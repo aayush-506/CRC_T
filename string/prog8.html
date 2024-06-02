@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">Enter the string</label>
+    <input type="text" id="str" placeholder="Enter the string">
+    <button onclick="check()">Check</button>
+    <p id="output">Checking..........</p>
+    <script>
+        function check(){
+            let str = document.getElementById("str").value
+            let dumy=""
+            for(let i = str.length -1 ;i>=0;i--){
+                  dumy+=str[i];
+            }
+            if(dumy==str){
+                document.getElementById("output").innerHTML=`The Entered String is Palindrom`
+            }
+            else{
+                document.getElementById("output").innerHTML=`The Entered String not is Palindrom`
+            }
+        }
+    </script>
+</body>
+</html>
